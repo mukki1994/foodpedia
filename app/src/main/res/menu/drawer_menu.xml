@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/home" android:title="Home"
+    android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/create_new_page"
+        android:title="Create New Page"
+        android:icon="@drawable/ic_create_new_page"/>
+    <item android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings_second"/>
+    <item android:id="@+id/my_business_pages"
+        android:title="My Business Pages"
+        android:icon="@drawable/ic_business_pages"/>
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout"/>
+</menu>

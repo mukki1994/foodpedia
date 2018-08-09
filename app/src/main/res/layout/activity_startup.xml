@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_bg_splash">
+    android:fillViewport="true">
     <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,10 +13,18 @@
         android:layout_height="wrap_content"
         android:focusableInTouchMode="true"
         android:focusable="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_bg_startup"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tab_layout"/>
     <android.support.v7.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="160dp"
         app:cardCornerRadius="8dp"
         app:cardPreventCornerOverlap="true"
         app:cardBackgroundColor="@color/white_view_opacity"
@@ -26,7 +34,8 @@
         android:layout_margin="30dp">
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="190dp">
+            android:layout_height="160dp">
+
 
             <ImageView
                 android:id="@+id/image_plate"
@@ -52,18 +61,67 @@
                 app:layout_constraintStart_toStartOf="@id/text_title"
                 app:layout_constraintTop_toBottomOf="@+id/image_plate"/>
 
-            <TextView
+            <ImageView
                 android:id="@+id/text_title"
                 android:layout_width="192dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/ic_title_second"
+                android:src="@drawable/ic_title_second"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_welcome" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
 
+            app:tabBackground="@color/dark_red"
+            app:tabIndicatorColor="@color/white"
+            app:tabTextColor="@color/white"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:layout_marginTop="40dp"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorHeight="2dp"
+            app:tabTextAppearance="@style/TabText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardview"/>
+ <!--       <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+        <ImageView
+            android:id="@+id/image_tab_indicator"
+            android:layout_width="14dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_tab_indicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintBottom_toBottomOf="@id/tab_layout"/>
+        <ImageView
+            android:id="@+id/image_tab_indicator_second"
+            android:layout_width="14dp"
+            android:layout_height="8dp"
+            android:src="@drawable/ic_tab_indicator"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintBottom_toBottomOf="@id/tab_layout"/>-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </android.support.v4.view.ViewPager>
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
