@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import com.foodpedia.app.R;
 import com.foodpedia.app.adapter.StartupViewPagerAdapter;
 
-public class StartupActivity extends AppCompatActivity {
+public class StartupActivity extends BaseActivity {
 
     private TabLayout mTabLayout;
     private ViewPager mViewPager;

@@ -132,7 +132,7 @@
         android:textSize="12sp"
         android:checked="false"
         android:paddingStart="6dp"
-        android:button="@drawable/checkbox_background"
+        android:button="@drawable/bg_checkbox_background"
         app:layout_constraintBottom_toBottomOf="@id/button_signup"
         app:layout_constraintEnd_toStartOf="@+id/button_signup"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.os.Bundle;
 import com.foodpedia.app.R;
 
-public class SplashActivity extends Activity {
+public class SplashActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
